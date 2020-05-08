@@ -2,19 +2,24 @@ import React, { useState } from 'react';
 import Resource from './Resource';
 const App = () => {
 
-    const [resource, setResource] = useState('POSTS');
+    const [resource, setResource] = useState('posts');
     return (
         <div>
             <div>
                 <button
-                    onClick={() => setResource('POSTS')}
+                    onClick={() => setResource('posts')}
                 >
                     POSTS
                 </button>
                 <button
-                    onClick={() => setResource('TODOS')}
+                    onClick={() => setResource('todos')}
                 >
                     TODO
+                </button>
+                <button
+                    onClick={() => setResource('users')}
+                >
+                    NAME
                 </button>
             </div>
             <Resource resource={resource} />
